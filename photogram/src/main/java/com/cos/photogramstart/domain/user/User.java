@@ -3,6 +3,7 @@ package com.cos.photogramstart.domain.user;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -26,6 +27,7 @@ public class User {
 	@GeneratedValue(strategy = GenerationType.IDENTITY) 	//번호 증가 전략이 데이터베이스를 따라간다. 
 	private int id;
 	
+	@Column(unique = true)
 	private String username;					//유저아이디 
 	private String password;					//패스워드 
 
