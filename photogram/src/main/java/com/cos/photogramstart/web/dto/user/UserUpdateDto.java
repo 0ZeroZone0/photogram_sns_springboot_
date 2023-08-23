@@ -15,11 +15,11 @@ public class UserUpdateDto {
 	private String gender;
 	
 	
-	// 조금 위험함. 코드 수정이 필요할 예정 (필수값이 아닌 데이터들도 포함되어 있어서) 
+	// 조금 위험함. 코드 수정이 필요할 예정
 	public User toEntity() {		
 		return User.builder()
-				.name(name)
-				.password(password)
+				.name(name)					//이름 기재 안했으면 문제!!(공백으로 들어올 시 공백으로 업뎃진행됨) Validation 체크 ! 
+				.password(password)	//패스워드를 기재 안했으면 문제!!(공백으로 들어올 시 공백으로 업뎃진행됨) Validation 체크 ! 
 				.website(website)
 				.bio(bio)
 				.phone(phone)

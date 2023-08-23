@@ -14,14 +14,12 @@ import com.cos.photogramstart.config.auth.PrincipalDetails;
 public class UserController {
 
 	@GetMapping("/user/{id}")
-	public String profile(@PathVariable String id) {
-		//@PathVariable int id 가 맞는데 현재 툴 오류로 진행 불가 String으로 임시 진행 
+	public String profile(@PathVariable int id) {
 		return "user/profile";
 	}
 	
 	@GetMapping("/user/{id}/update")
-	public String update(@PathVariable String id, @AuthenticationPrincipal PrincipalDetails principalDetails) {
-		//@PathVariable int id 가 맞는데 현재 툴 오류로 진행 불가 String으로 임시 진행 
+	public String update(@PathVariable int id, @AuthenticationPrincipal PrincipalDetails principalDetails) {
 		//1. 추천 
 		System.out.println("세션 정보 :" +principalDetails.getUser());
 		
