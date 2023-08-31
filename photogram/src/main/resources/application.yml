@@ -37,4 +37,4 @@ spring:
       password: 1234   
 
 file:
- path: /Users/heoji/git/photogram_sns_springboot_/photogram/upload/
+ path: /Users/heoji/workspace/upload/
