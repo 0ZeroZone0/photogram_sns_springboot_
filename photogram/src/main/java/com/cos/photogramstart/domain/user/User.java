@@ -18,6 +18,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import com.cos.photogramstart.domain.image.Image;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 // JPA - Java Persistence API (자바로 데이터를 영구적으로 저장(DB)할 수 있는 API를 제공)
 
@@ -53,6 +54,7 @@ public class User {
 	//LAZY 일때는 User를 SELECT 할때 해당 User id로 등록된 image들을 가져오지마 - 대신 getImages() 함수의 image들이  호츌될때 가져와 
 	//Eager 일때는 User를 SELECT 할때 해당 User id로 등록된 image들을 Join해서 가져와 ! 
 	@OneToMany(mappedBy = "user", fetch = FetchType.LAZY) 
+	@JsonIgnoreProperties({"user"})
 	private List<Image> images; 		//양방향 맵핍 
 
 	private LocalDateTime createDate;
