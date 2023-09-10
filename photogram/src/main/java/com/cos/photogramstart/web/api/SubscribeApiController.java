@@ -28,9 +28,11 @@ public class SubscribeApiController {
 	}
 	
 	//누가 구독을 취소 했는지 
-	@DeleteMapping("/api/Subscribe/{toUserId}")
+	@DeleteMapping("/api/subscribe/{toUserId}")
 	public ResponseEntity<?> unSubscribe(@AuthenticationPrincipal PrincipalDetails principalDetails, @PathVariable int toUserId){
+		System.out.println("123123");
 		subscribeService.구독취소하기(principalDetails.getUser().getId(), toUserId);
 		return new ResponseEntity<>(new CMRespDto<>( 1, "구독취하기 성공", null), HttpStatus.OK);
 	}	
+
 }

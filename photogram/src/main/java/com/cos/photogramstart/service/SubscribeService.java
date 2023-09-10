@@ -25,6 +25,7 @@ public class SubscribeService {
 	
 	@Transactional
 	public void 구독취소하기 (int fromUserId, int toUserId) {
+		System.out.println("456");
 		 subscribeRepository.mUnSubscribe(fromUserId, toUserId);
 	}	
 	
