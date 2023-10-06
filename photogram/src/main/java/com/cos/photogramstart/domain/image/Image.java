@@ -42,12 +42,15 @@ public class Image {	// N , 1
 	private User user; // 1,  1
 	
 	// 이미지 좋아요 
-	@JsonIgnoreProperties({"image","user"})
+	@JsonIgnoreProperties({"image"})
 	@OneToMany(mappedBy = "image")
 	private List<Likes> likes;
 	
 	@Transient	//DB에 컬럼이 만들어지지 않는다.
 	private boolean likeState;
+	
+	@Transient
+	private int likeCount;
 	
 	// 댓글     -추후 업데이
 	

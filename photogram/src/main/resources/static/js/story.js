@@ -56,7 +56,7 @@ function getStoryItem(image) {
 			</button>
 		</div>
 
-		<span class="like"><b id="storyLikeCount-1">3 </b>likes</span>
+		<span class="like"><b id="storyLikeCount-${image.id}">${image.likeCount} </b>likes</span>
 
 		<div class="sl__item__contents__content">
 			<p>${image.caption}</p>
@@ -97,7 +97,7 @@ $(window).scroll(() => {
 	let checkNum = $(window).scrollTop() - ( $(document).height() - $(window).height() );
 	//console.log('윈도우 scrollTop - (문서의 높이 - 윈도우 높이)', checkNum);
 	
-	if(checkNum < 10 && checkNum >-10){
+	if(checkNum < 1  && checkNum >-1){
 		page++;
 		storyLoad();
 	}
