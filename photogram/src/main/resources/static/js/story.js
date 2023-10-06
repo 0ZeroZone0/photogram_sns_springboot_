@@ -44,8 +44,15 @@ function getStoryItem(image) {
 	<div class="sl__item__contents">
 		<div class="sl__item__contents__icon">
 
-			<button>
-				<i class="fas fa-heart active" id="storyLikeIcon-${image.id}" onclick="toggleLike(${image.id})"></i>
+			<button>`;
+			
+				if(image.likeState){
+					item += `<i class="fas fa-heart active" id="storyLikeIcon-${image.id}" onclick="toggleLike(${image.id})"></i>`;
+				}else{
+					item += `<i class="far fa-heart active" id="storyLikeIcon-${image.id}" onclick="toggleLike(${image.id})"></i>`;
+				}
+
+			item += `
 			</button>
 		</div>
 
@@ -88,9 +95,9 @@ $(window).scroll(() => {
 	//console.log("문서의 높이", $(document).height());
 	
 	let checkNum = $(window).scrollTop() - ( $(document).height() - $(window).height() );
-	console.log('윈도우 scrollTop - (문서의 높이 - 윈도우 높이)', checkNum);
+	//console.log('윈도우 scrollTop - (문서의 높이 - 윈도우 높이)', checkNum);
 	
-	if(checkNum < 1 && checkNum >-1){
+	if(checkNum < 10 && checkNum >-10){
 		page++;
 		storyLoad();
 	}

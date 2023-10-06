@@ -39,10 +39,11 @@ public class Likes {	       // N
 	@GeneratedValue(strategy = GenerationType.IDENTITY) 	
 	private int id;
 	
-	@JoinColumn(name="imageId")	
+	@JoinColumn(name="imageId")	//무한참조되서 추가 
 	@ManyToOne
 	private Image image; // 1
 	
+	//오류가 터지고 나서 잡아봅시다.
 	@JoinColumn(name="userId")	
 	@ManyToOne
 	private User user;     // 1
