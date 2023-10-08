@@ -71,8 +71,16 @@ public class ImageService {
 		Image image = imageUploadDto.toEntity(imageFileName, principalDetails.getUser());
 	    imageRepository.save(image);
 		
-		
-		
 	}
+	
+	
+	@Transactional(readOnly = true)
+	public List<Image> 인기사진(){
+		return imageRepository.mPopular();
+	}
+	
+	
+	
+	
 	
 }
