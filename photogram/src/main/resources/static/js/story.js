@@ -176,10 +176,12 @@ function addComment(imageId) {
 	//console.log("자바스크립트 data : " , data)
 	//console.log("통신 JSON  data : " ,  JSON.stringify(data))
 
+
 	if (data.content === "") {
 		alert("댓글을 작성해주세요!");
 		return;
 	}
+
 	
 	$.ajax({
 		type: "post",
@@ -205,7 +207,8 @@ function addComment(imageId) {
 	
 	
 	}).fail(error=>{
-		console.log("오류", error)
+		console.log("오류", error.responseJSON.data.content);
+		alert(error.responseJSON.data.content);
 	});	
 	
 	commentInput.val("");	//인풋 필드를 깨끗하게 비워준다. 
