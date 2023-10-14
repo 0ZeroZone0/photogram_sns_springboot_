@@ -36,5 +36,16 @@ spring:
       name: test
       password: 1234   
 
+    oauth2:
+      client:
+        registration:
+          facebook:
+            client-id: 1240849300642597
+            client-secret: 9699cd2a67138d6bd51ec60a9b7e2715
+            scope:
+            - public_profile
+            - email
+
+
 file:
  path: /Users/heoji/workspace/upload/
