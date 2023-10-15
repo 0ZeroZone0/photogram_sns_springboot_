@@ -45,7 +45,6 @@ spring:
             scope:
             - public_profile
             - email
-
-
+            
 file:
  path: /Users/heoji/workspace/upload/
