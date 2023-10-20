@@ -51,6 +51,10 @@ create database photogram;
 
 ### yml 설정
 
+file path는 해당 사진 업로드할 폴더 위치로 수정 </br>
+mac :       /Users/유저네임/플젝명/upload/ </br>
+window :   C:/src/플젝명/upload/ </br>
+
 ```yml
 server:
   port: 8080
