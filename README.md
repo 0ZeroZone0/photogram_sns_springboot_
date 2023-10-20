@@ -1,6 +1,6 @@
 # photogram 포토그램 - 인스타그램 클론 코딩
 
-** codingspecialist님 EaszUp-Springboot-Phtogram-Start repository를 fork해서 진행한 프로젝트입니다. ** <br/>
+** codingspecialist님 EaszUp-Springboot-Phtogram-Start repository를 fork해서 진행한 프로젝트입니다. ** <br/><br/>
 [참고 주소](https://github.com/codingspecialist)
 
 ### 진행 과정
