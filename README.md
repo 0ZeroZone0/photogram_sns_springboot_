@@ -1,10 +1,11 @@
 # photogram 포토그램 - 인스타그램 클론 코딩
 
-** codingspecialist님 EaszUp-Springboot-Phtogram-Start repository를 fork해서 진행한 프로젝트입니다. ** <br/><br/>
+### codingspecialist님의 EaszUp-Springboot-Phtogram-Start repository를 fork로 진행한 프로젝트입니다.
 [참고 주소](https://github.com/codingspecialist)
 
 ### 진행 과정
 [블로그](https://zerozone.oopy.io/instagram)
+
 
 ### 의존성
 
